@@ -47,6 +47,9 @@ resource "google_container_node_pool" "app_pool" {
     min_node_count = 1
     max_node_count = 2
   }
+  labels = {
+      pool = "application-pool"
+  }
 
   node_config {
     machine_type = "e2-medium"
